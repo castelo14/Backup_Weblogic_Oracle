@@ -23,7 +23,7 @@ if [ $USER = "$1" ]; then
 
         Batch=/u01/work/domain/
         mkdir -p $caminho
-        find $Batch/*/server/ -type f \( -name "*.log" -o -name ".out" \) -mtime +3 -exec rsync -avz --remove-source-files {} $caminho2 \;
+        find $Batch/*/servers/ -type f \( -name "*.log" -o -name ".out" \) -mtime +3 -exec rsync -avz --remove-source-files {} $caminho2 \;
     fi
 
     cd $caminho1
